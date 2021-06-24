@@ -35,7 +35,8 @@ var toggle7 = "Hello"
 var toggle8 = 0.11
 
 ``` 
-#
+#배열
+
 
 ``` 
 
@@ -64,7 +65,7 @@ var arr8[String:String]()
 
 ``` 
 
-#
+#조건문
 ``` 
 //조건문
 
@@ -108,7 +109,9 @@ var i = 0
 while i < 100 {
   i += 1
 ```
+
 #옵셔널
+
 ``` 
   //옵셔널 (Optional) nil 값
 
