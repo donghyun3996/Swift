@@ -30,9 +30,7 @@ class ViewController: UIViewController,UITableViewDelegate,UITableViewDataSource
     }
 
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
-    }
+    
     
     @IBOutlet var tableView: UITableView!
     override func viewDidLoad() {
