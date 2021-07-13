@@ -13,7 +13,7 @@ class costomCell: UITableViewCell {
     var lb: UILabel = {
         let lb = UILabel()
         lb.backgroundColor = .clear
-        lb.text = "형우 씹덕"
+        
         lb.textColor = .systemGreen
         lb.font = UIFont.systemFont(ofSize: 17, weight: .bold)
         return lb
@@ -21,7 +21,7 @@ class costomCell: UITableViewCell {
     var lb1: UILabel = {
         let lb = UILabel()
         lb.backgroundColor = .clear
-        lb.text = "형우 씹덕"
+       
         lb.textColor = .black
         lb.font = UIFont.systemFont(ofSize: 13, weight: .light)
         return lb
@@ -29,7 +29,7 @@ class costomCell: UITableViewCell {
     var lb2: UILabel = {
         let lb = UILabel()
         lb.backgroundColor = .clear
-        lb.text = "형우 씹덕"
+    
         lb.textColor = .systemGray
         lb.font = UIFont.boldSystemFont(ofSize: 13)
         
