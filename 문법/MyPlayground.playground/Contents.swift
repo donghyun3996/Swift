@@ -1,24 +1,53 @@
-import UIKit
+import Foundation
+import RxSwift
 
-class User{
-    var nickname: String
-    var age: Int
-    
-    init(nickname:String, age: Int)
-    {
-        self.nickname = nickname
-        self.age = age
+print("just")
+Observable<Int>.just(1)
+    .subscribe(onNext:{
+        print($0)
+    })
+
+print("of")
+Observable<Int>.of(1,2,3,4,5)
+    .subscribe(onNext:{
+        print($0)
+    })
+print("from")
+Observable.from([1,2,3,4,5])
+    .subscribe(onNext:{
+        print($0)
+    })
+
+print("ob")
+Observable.of(1,2,3)
+    .subscribe{
+        print($0)
     }
-    init(age:Int){
-        self.nickname = "donghun"
-        self.age = age
+
+print("ob")
+Observable.of(1,2,3)
+    .subscribe{
+        if let element = $0.element
+        {
+            print($0)
+        }
+            
     }
-}
-var user = User(nickname: "donhyun", age: 17)
-user.nickname
-user.age
 
 
-var user2 = User(age: 18)
-user2.nickname
-user2.age
+print("Ddddddd")
+Observable<Void>.empty()
+    .subscribe{
+        print($0)
+    }
+
+
+print("navvvvvv")
+Observable.never()
+    .debug("naver")
+    .subscibe(onNExt:{
+       print($0)
+    },
+    onCompleted:{
+        print("completed")
+    })
