@@ -51,3 +51,13 @@ Observable.never()
     onCompleted:{
         print("completed")
     })
+
+
+print("single1")
+
+Single<String>.just("s")
+    .subscribe(
+        onSuccess: {print($0)}, onFailure: {print("error:\($0)")}, onDisposed: {print("disposed")}
+    )
+    .dispose(by: disposeBag)
+
