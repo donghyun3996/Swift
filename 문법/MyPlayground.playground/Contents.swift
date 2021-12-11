@@ -34,6 +34,32 @@ Observable.of(1,2,3)
             
     }
 
+print("single1")
+
+Single<String>.just("s")
+    .subscribe(
+        onSuccess: {print($0)}, onFailure: {print("error:\($0)")}, onDisposed: {print("disposed")}
+    )
+    .disposed(by: disposeBag)
+
+
+print("single2")
+Observable<String>.create{ observer -> Disposable in
+    observer.onError(TrairsError.single)
+    return Disposables.create()
+}
+    .asSingle()
+    .subscribe {
+    onSuccess:{
+        print($0)
+    }, zonFailure: {
+        print("error: \($0.localizedDescription)")
+    }, onDisposed: {
+        print("disposed")
+    }
+    .dispose(by DisposeBag)
+        
+
 
 print("Ddddddd")
 Observable<Void>.empty()
