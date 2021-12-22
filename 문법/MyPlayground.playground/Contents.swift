@@ -5,6 +5,7 @@ print("just")
 Observable<Int>.just(1)
     .subscribe(onNext:{
         print($0)
+        
     })
 
 
